@@ -780,6 +780,16 @@ p {
   right: 0;
   left: 0;
 }
+@media all and (max-width: 1024px) {
+  .home-bottom-shape {
+    display: none;
+  }
+}
+@media all and (min-width: 1024px) {
+  .mobile-streams {
+    display: none;
+  }
+}
 
 .neg-mb-4 {
   margin-bottom: -5%;
@@ -884,6 +894,11 @@ p {
   left: 0;
   height: 100%;
   width: 100%;
+}
+
+.streaming-sites {
+  display: flex;
+  flex-direction: row;
 }
 
 .hero-1-bg .video-play-icon {
@@ -1038,7 +1053,7 @@ p {
 
 .intro-youtube {
   width: 100%;
-  background-image: url("../images/artwork/thumbnail.png");
+  background-image: url("https://res.cloudinary.com/tiyeni/image/upload/v1581693360/thumbnail.png");
   background-size: cover;
   background-position: center;
   padding: 20%;
