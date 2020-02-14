@@ -54,8 +54,12 @@
               directly!
             </p>
             <div class="text-center subcribe-form mt-4">
-              <form action="#">
-                <input type="text" placeholder="Enter your email..." />
+              <form action="/.netlify/functions/sendSong">
+                <input
+                  type="text"
+                  name="email"
+                  placeholder="Enter your email..."
+                />
                 <button type="submit" class="btn rounded-pill btn-green">
                   Request for MP3
                 </button>
@@ -63,11 +67,13 @@
             </div>
             <div class="mt-4 mobile-streams">
               <div class="google-sign float-left mr-2">
-                <img
-                  src="images/media/streaming.svg"
-                  alt=""
-                  class="img-fluid"
-                />
+                <a href="https://liwu.fanlink.to/Intro" target="_blank">
+                  <img
+                    src="images/media/streaming.svg"
+                    alt=""
+                    class="img-fluid"
+                  />
+                </a>
               </div>
               <div class="pt-2">
                 <a

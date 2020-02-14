@@ -1,0 +1,22 @@
+{
+  "name": "get-alinafe",
+  "version": "1.0.0",
+  "description": "Official Website of Liwu's new Album",
+  "main": "javascript/mailer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liwoo/get-alinafe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liwoo/get-alinafe/issues"
+  },
+  "homepage": "https://github.com/liwoo/get-alinafe#readme",
+  "dependencies": {
+    "nodemailer": "^6.4.2"
+  }
+}
