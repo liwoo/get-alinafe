@@ -21,7 +21,7 @@ async function send(recepient) {
       }
     ],
     html:
-      "<p>Whatsup!</p><p><Thank you for supporting my music!</p><p>Please find attached the Intro to my upcoming album!  Don't forget to check out the video on YouTube as well.</p><br /><p>Much Appreciated,</p><p>Liwu</p>"
+      "<p>Whatsup!</p><p><Thank you for supporting my music!</p><p>Please find attached the Intro to my upcoming album!  Don't forget to check out the <a href='https://youtu.be/McDvYyCLYBs'>video on YouTube as well</a>.</p><br /><p>Much Appreciated,</p><p>Liwu</p>"
   };
 
   try {
