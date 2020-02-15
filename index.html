@@ -49,13 +49,14 @@
             >
               01. INTRO
             </h1>
-            <p class="text-white mb-5">
+            <p class="text-white mb-5" id="messenger">
               Please Enter your Email Address below so I can send you the song
               directly!
             </p>
             <div class="text-center subcribe-form mt-4">
-              <form action="/.netlify/functions/sendSong">
+              <form>
                 <input
+                  id="email"
                   type="email"
                   required
                   name="email"
