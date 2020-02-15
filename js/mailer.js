@@ -1,23 +1,24 @@
 const mailer = require("nodemailer");
 
-const transporter = mailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: "liwuraps@gmail.com",
-    pass: "t1m3ISn0w"
-  }
-});
 
-async function send(recepient) {
+async function send(recepient, link, username, password) {
+
+  const transporter = mailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: username,
+      pass: password
+    }
+  });
+
   const mailOptions = {
-    from: "Liwu <liwuraps@gmail.com>",
+    from: `Liwu <${username}>`,
     to: recepient,
     subject: "Enjoy the Intro.",
     attachments: [
       {
         filename: "Intro.mp3.zip",
-        path:
-          "https://res.cloudinary.com/tiyeni/raw/upload/v1581743489/Intro.mp3.zip"
+        path: link
       }
     ],
     html:
