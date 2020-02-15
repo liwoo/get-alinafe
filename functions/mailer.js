@@ -8,31 +8,36 @@ const transporter = mailer.createTransport({
   }
 });
 
-export default function send(recepient) {
+async function send(recepient) {
   const mailOptions = {
     from: "Liwu <liwuraps@gmail.com>",
-    to: $recepient,
+    to: recepient,
     subject: "Enjoy the Intro.",
     attachments: [
       {
         filename: "Intro.mp3.zip",
-        path: __dirname + "/attachment.txt"
+        path:
+          "https://res.cloudinary.com/tiyeni/raw/upload/v1581743489/Intro.mp3.zip"
       }
     ],
     html:
       "<p>Whatsup!</p><p><Thank you for supporting my music!</p><p>Please find attached the Intro to my upcoming album!  Don't forget to check out the video on YouTube as well.</p><br /><p>Much Appreciated,</p><p>Liwu</p>"
   };
-  transporter.sendMail(mailOptions, function(error, info) {
-    if (error) {
-      return {
-        success: false,
-        message: error
-      };
-    } else {
-      return {
-        success: true,
-        message: info.response
-      };
-    }
-  });
+
+  try {
+    const info = await transporter.sendMail(mailOptions);
+    console.log(info);
+    return {
+      success: true,
+      message: info.response
+    };
+  } catch (error) {
+    console.error(error);
+    return {
+      success: false,
+      message: error[Error]
+    };
+  }
 }
+
+module.exports = send;
