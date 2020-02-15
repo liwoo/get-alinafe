@@ -5,6 +5,6 @@ exports.handler = async (event, context) => {
   const response = await send(email);
   return {
     statusCode: response.success ? 200 : 500,
-    body: response.message
+    body: response
   };
 };
