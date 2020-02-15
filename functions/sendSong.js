@@ -1,8 +1,10 @@
-exports.handler = async (event, context) => {
-  const email = event.queryStringParameters.name || "World";
+const send = require("./mailer");
 
+exports.handler = async (event, context) => {
+  const email = event.queryStringParameters.email;
+  const response = send(email);
   return {
-    statusCode: 200,
-    body: `Hello, ${email}`
+    statusCode: response.success ? 200 : 500,
+    body: response.message
   };
 };

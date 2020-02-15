@@ -16,7 +16,7 @@ export default function send(recepient) {
     attachments: [
       {
         filename: "Intro.mp3.zip",
-        path: __dirname + "/Intro.mp3.zip"
+        path: __dirname + "/attachment.txt"
       }
     ],
     html:
@@ -24,9 +24,15 @@ export default function send(recepient) {
   };
   transporter.sendMail(mailOptions, function(error, info) {
     if (error) {
-      console.log(error);
+      return {
+        success: false,
+        message: error
+      };
     } else {
-      console.log("Email sent: " + info.response);
+      return {
+        success: true,
+        message: info.response
+      };
     }
   });
 }
