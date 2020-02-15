@@ -1,8 +1,6 @@
 const mailer = require("nodemailer");
 
-
 async function send(recepient, link, username, password) {
-
   const transporter = mailer.createTransport({
     service: "gmail",
     auth: {
@@ -17,7 +15,7 @@ async function send(recepient, link, username, password) {
     subject: "Enjoy the Intro.",
     attachments: [
       {
-        filename: "Intro.mp3.zip",
+        filename: "Intro.mp3",
         path: link
       }
     ],

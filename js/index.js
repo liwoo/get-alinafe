@@ -1,4 +1,4 @@
-const send = require("./mailer");
+const send = require("../functions/mailer");
 
 async function testSend() {
   const response = await send("jeremiahchienda@gmail.com");

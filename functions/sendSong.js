@@ -1,4 +1,4 @@
-const send = require("../js/mailer");
+const send = require("./mailer");
 const { SONGLINK, FROMEMAIL, FROMPASSWORD } = process.env;
 exports.handler = async (event, context) => {
   const email = event.queryStringParameters.email;

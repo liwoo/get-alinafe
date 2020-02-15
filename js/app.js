@@ -1,11 +1,3 @@
-function submitForm(e) {
-  const el = document.getElementById("email");
-  alert("hey again");
-  e.preventDefault();
-  return false;
-  //
-}
-
 const element = document.querySelector("form");
 element.addEventListener("submit", event => {
   event.preventDefault();
@@ -21,7 +13,7 @@ element.addEventListener("submit", event => {
     .then(response => {
       return response.json();
     })
-    .then(({success}) => {
+    .then(({ success }) => {
       if (success) {
         messenger.classList.add("bg-green");
         messenger.textContent =
