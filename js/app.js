@@ -21,7 +21,7 @@ element.addEventListener("submit", event => {
     .then(response => {
       return response.json();
     })
-    .then(json => {
+    .then(({success}) => {
       if (success) {
         messenger.classList.add("bg-green");
         messenger.textContent =
