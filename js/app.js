@@ -10,14 +10,18 @@ const element = document.querySelector("form");
 element.addEventListener("submit", event => {
   event.preventDefault();
   const email = event.target.children[0].value;
+  const button = document.getElementById("button");
+
+  button.textContent = "Sending";
+  button.disabled = true;
 
   const messenger = document.getElementById("messenger");
-
-  fetch(`/.netlify/functions/sendSong?email=${email}`)
+  const url = `/.netlify/functions/sendSong?email=${email}`;
+  fetch(url)
     .then(response => {
       return response.json();
     })
-    .then(({ success }) => {
+    .then(json => {
       if (success) {
         messenger.classList.add("bg-green");
         messenger.textContent =
@@ -34,11 +38,12 @@ element.addEventListener("submit", event => {
     .catch(error => {
       console.log(error);
       messenger.classList.add("bg-red");
-      messenger.textContent =
-        "My Bad! This one is on us, lemme see what went wrong...";
+      messenger.textContent = error;
+    })
+    .finally(() => {
+      button.disabled = false;
+      button.textContent = "Gimme";
     });
-
-  // alert(el.target);
 });
 
 var prevScrollpos = window.pageYOffset;
