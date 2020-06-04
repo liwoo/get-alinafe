@@ -758,13 +758,7 @@ p {
 }
 
 .bg-gradient {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#6d62fd),
-    to(#483afc)
-  );
+  background: -webkit-gradient(linear, left top, right top, from(#6d62fd), to(#483afc));
   background: linear-gradient(to right, #6d62fd, #483afc);
 }
 
@@ -870,13 +864,7 @@ p {
 }
 
 .bg-overlay {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#6d62fd),
-    to(#483afc)
-  );
+  background: -webkit-gradient(linear, left top, right top, from(#6d62fd), to(#483afc));
   background: linear-gradient(to right, #6d62fd, #483afc);
   opacity: 0.85;
   position: absolute;
@@ -1016,7 +1004,8 @@ p {
 }
 
 .background-scene,
-.background-overlay {
+.background-overlay,
+.winning-overlay {
   position: absolute;
   top: 0;
   left: -10%;
@@ -1024,6 +1013,12 @@ p {
   bottom: 0;
   background-image: url("../images/backgrounds/intro.svg");
   background-size: cover;
+}
+
+.winning-overlay {
+  background-image: none;
+  background: rgb(57, 178, 182);
+  background: linear-gradient(180deg, rgba(57, 178, 182, 1) 0%, rgba(227, 190, 24, 1) 100%);
 }
 
 .background-overlay {
@@ -1051,9 +1046,10 @@ p {
   margin-top: -50%;
 }
 
-.intro-youtube {
+.intro-youtube,
+.winning-youtube {
   width: 100%;
-  background-image: url("https://res.cloudinary.com/tiyeni/image/upload/v1581693360/thumbnail.png");
+  background-image: url("https://res.cloudinary.com/tiyeni/image/upload/q_auto/v1581693360/thumbnail.png");
   background-size: cover;
   background-position: center;
   padding: 20%;
@@ -1064,6 +1060,10 @@ p {
   -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.55);
   box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.55);
   transition: transform 0.5s ease;
+}
+
+.winning-youtube {
+  background-image: url("https://res.cloudinary.com/tiyeni/image/upload/q_auto/c_fill,h_1370,w_2322/v1591288046/winning.png");
 }
 
 .bg-green,
@@ -1081,17 +1081,30 @@ p {
   background-color: red;
 }
 
-.intro-youtube:hover {
+.banner {
+  position: fixed;
+  width: 100%;
+  background-color: #000000;
+  padding: 2rem;
+  z-index: 100;
+  color: #fff;
+  font-size: x-large;
+}
+
+.intro-youtube:hover,
+.winning-youtube:hover {
   transform: scale(1.2);
 }
 
-.intro-youtube > img {
+.intro-youtube > img,
+.winning-youtube > img {
   transform: scale(0.5);
   margin-left: 30%;
   transition: transform 0.3s ease;
 }
 
-.intro-youtube > img:hover {
+.intro-youtube > img:hover,
+.winning-youtube > img:hover {
   transform: scale(1);
   transform: rotate(21deg);
 }
@@ -1264,13 +1277,7 @@ p {
 
 .service-box:hover,
 .service-box.active {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#6d62fd),
-    to(#5a4efd)
-  );
+  background: -webkit-gradient(linear, left top, right top, from(#6d62fd), to(#5a4efd));
   background: linear-gradient(to right, #6d62fd, #5a4efd);
 }
 
@@ -1393,13 +1400,7 @@ p {
   position: absolute;
   left: 20px;
   top: 0px;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#6d62fd),
-    to(#483afc)
-  );
+  background: -webkit-gradient(linear, left top, right top, from(#6d62fd), to(#483afc));
   background: linear-gradient(to right, #6d62fd, #483afc);
   padding: 8px 4px 16px 4px;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
@@ -1418,13 +1419,7 @@ p {
 
 .pricing-box:hover .pricing-icon,
 .pricing-box.active .pricing-icon {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#6d62fd),
-    to(#483afc)
-  ) !important;
+  background: -webkit-gradient(linear, left top, right top, from(#6d62fd), to(#483afc)) !important;
   background: linear-gradient(to right, #6d62fd, #483afc) !important;
   color: #ffffff !important;
 }

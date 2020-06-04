@@ -9,13 +9,13 @@
 .bg-overlay {
     background: linear-gradient(to right, $purple, darken($purple, 8%));
     opacity: 0.85;
-    @include overlay
+    @include overlay;
 }
 
 .bg-dark-overlay {
     background: $black;
     opacity: 0.75;
-    @include overlay
+    @include overlay;
 }
 
 // ***** HERO 1 ***** //
@@ -40,7 +40,7 @@
     .bg-hero-overlay {
         background-image: url("../images/hero-bg-1.png");
         opacity: 1;
-        @include overlay
+        @include overlay;
     }
 }
 
@@ -54,7 +54,7 @@
 .hero-2-bg {
     padding: 195px 0 140px 0px;
     .hero-2-registration-form {
-        box-shadow: 0 4px 16px rgba($black, .065);
+        box-shadow: 0 4px 16px rgba($black, 0.065);
         padding: 40px;
         .registration-form {
             .form-control {
@@ -156,7 +156,7 @@
     }
 }
 
-// ***** HERO-5 ***** // 
+// ***** HERO-5 ***** //
 .hero-5-bg {
     padding: 180px 0 180px 0px;
     .hero-5-title {
@@ -169,7 +169,7 @@
         bottom: 0;
         right: 0;
         background-color: rgba($black, 0.4);
-        border-radius: .25rem;
+        border-radius: 0.25rem;
         transition: all 0.5s;
         padding: 10px;
         .video-icon {
@@ -204,7 +204,7 @@
     }
 }
 
-// ***** HERO-6 ***** // 
+// ***** HERO-6 ***** //
 .hero-6-bg {
     padding: 240px 0 250px 0px;
     .hero-6-content {
@@ -224,13 +224,13 @@
     padding: 65px 30px 30px;
     transition: all 0.5s;
     border-radius: 6px;
-    box-shadow: 0 4px 18px rgba($dark, .05);
+    box-shadow: 0 4px 18px rgba($dark, 0.05);
     .service-icon {
         position: relative;
         z-index: 1;
         &:after {
             content: "";
-            background: linear-gradient(45deg, transparent, rgba($purple, .06));
+            background: linear-gradient(45deg, transparent, rgba($purple, 0.06));
             height: 70px;
             width: 70px;
             position: absolute;
@@ -246,7 +246,7 @@
         .service-icon {
             color: $white !important;
             &:after {
-                background: linear-gradient(45deg, transparent, rgba($white, .06));
+                background: linear-gradient(45deg, transparent, rgba($white, 0.06));
             }
         }
         .service-title,
@@ -275,7 +275,7 @@
 // ***** COUNTER ***** //
 .counter-box {
     background: rgba($white, 0.025);
-    border-bottom: 1px solid rgba($white, .2);
+    border-bottom: 1px solid rgba($white, 0.2);
 }
 
 // ***** TESTIMONIAL ***** //
@@ -285,7 +285,7 @@
     padding: 30px;
     box-shadow: 0 3px 10px rgba($black, 0.05);
     .user-img {
-        box-shadow: 0 5px 12px rgba($purple, .2);
+        box-shadow: 0 5px 12px rgba($purple, 0.2);
         transition: all 0.5s;
     }
     .testi-icon {
@@ -295,7 +295,7 @@
         border-bottom: 2px solid $purple;
         box-shadow: 0 3px 16px rgba($black, 0.1);
         .user-img {
-            box-shadow: 0 7px 12px rgba($purple, .3);
+            box-shadow: 0 7px 12px rgba($purple, 0.3);
             transform: translateY(-6px);
         }
         .testi-icon {
@@ -359,7 +359,7 @@
 .bg-cta-overlay {
     background-image: url("../images/cta-bg.png");
     opacity: 1;
-    @include overlay
+    @include overlay;
 }
 
 // ***** FOOTER ***** //
@@ -398,7 +398,7 @@
     transition: all 0.5s;
     .texti-2-box {
         position: relative;
-        box-shadow: 0 4px 18px rgba($dark, .05);
+        box-shadow: 0 4px 18px rgba($dark, 0.05);
         .testi-2-icon {
             color: $purple;
         }
@@ -413,23 +413,23 @@
             right: 0;
             margin: 0 auto;
             bottom: -9px;
-            box-shadow: 2px 2px 2px rgba($black, .012);
+            box-shadow: 2px 2px 2px rgba($black, 0.012);
         }
     }
     .testi-img-content {
         margin-top: 30px;
         img {
             max-width: 60px;
-            box-shadow: 0 6px 12px rgba($black, .2);
+            box-shadow: 0 6px 12px rgba($black, 0.2);
         }
     }
     &:hover {
         transform: translateY(-8px);
         .texti-2-box {
             background: $purple;
-            box-shadow: 0 4px 20px rgba($purple, .3);
+            box-shadow: 0 4px 20px rgba($purple, 0.3);
             p {
-                color: rgba($white, .6) !important;
+                color: rgba($white, 0.6) !important;
             }
             .testi-2-icon {
                 color: $white;
@@ -440,7 +440,7 @@
         }
         .testi-img-content {
             img {
-                box-shadow: 0 4px 12px rgba($purple, .4);
+                box-shadow: 0 4px 12px rgba($purple, 0.4);
             }
         }
     }
@@ -448,7 +448,7 @@
 
 // ***** LETEST POST ***** //
 .post-content {
-    box-shadow: 0 4px 18px rgba($dark, .05);
+    box-shadow: 0 4px 18px rgba($dark, 0.05);
 }
 
 @keyframes bounce {
